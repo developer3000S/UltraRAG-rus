@@ -3652,7 +3652,7 @@ export function ChatPage() {
                   >
                     <button
                       type="button"
-                      className={`settings-submenu-item ${locale === "zh" ? "active" : ""}`}
+                      className={`settings-submenu-item ${locale === "ru" ? "active" : ""}`}
                       onClick={(event) => {
                         event.stopPropagation();
                         setLocale("ru");
