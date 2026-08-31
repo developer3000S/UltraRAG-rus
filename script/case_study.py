@@ -284,7 +284,7 @@ body.lightbox-open{overflow:hidden}
 """
 
 INDEX_HTML = r"""<!doctype html>
-<html lang="zh-CN">
+<html lang="ru">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -295,14 +295,14 @@ INDEX_HTML = r"""<!doctype html>
   <div class="topbar">
     <div class="topbar-row">
       <div class="topbar-title"><div class="topbar-icon"></div>{title}</div>
-      <select id="file-select" class="file-select" title="Select data file"></select>
+      <select id="file-select" class="file-select" title="Выбор файла данных"></select>
       <div class="topbar-sep"></div>
       <div class="btn-group">
-        <button id="prev" class="btn">← Prev</button>
-        <button id="next" class="btn">Next →</button>
+        <button id="prev" class="btn">← Назад</button>
+        <button id="next" class="btn">Вперёд →</button>
       </div>
-      <button id="toggle-all" class="btn">Expand All</button>
-      <div class="topbar-badge" id="counter">Case 1 / 1</div>
+      <button id="toggle-all" class="btn">Развернуть все</button>
+      <div class="topbar-badge" id="counter">Кейс 1 / 1</div>
     </div>
   </div>
 
@@ -312,11 +312,11 @@ INDEX_HTML = r"""<!doctype html>
 
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <img id="lightbox-img" alt="" />
-    <button id="lightbox-close" class="lightbox-close" type="button">Close ✕</button>
+    <button id="lightbox-close" class="lightbox-close" type="button">Закрыть ✕</button>
   </div>
 
   <div class="footer">
-    Keyboard ← → to switch Case &#183; Click step to expand/collapse &#183; Top to switch data file &#183; <a href="/api/reload">/api/reload</a> Hot reload
+    Клавиши ← → переключают кейсы &#183; Клик по шагу разворачивает/сворачивает &#183; Вверху переключение файла данных &#183; <a href="/api/reload">/api/reload</a> Горячая перезагрузка
   </div>
 
 <script>
@@ -380,7 +380,7 @@ function attachImageZoom(img, altLabel) {
 
 async function fetchCases() {
   const res = await fetch('/api/cases');
-  if (!res.ok) throw new Error('Failed to load cases');
+  if (!res.ok) throw new Error('Ошибка загрузки кейсов');
   const data = await res.json();
   state.cases = data.cases || [];
 }
@@ -414,7 +414,7 @@ async function switchFile(filePath) {
   if (sel) sel.disabled = true;
   try {
     const res = await fetch('/api/switch?file=' + encodeURIComponent(filePath));
-    if (!res.ok) { alert('Failed to switch file'); return; }
+    if (!res.ok) { alert('Ошибка переключения файла'); return; }
     state.currentFile = filePath;
     await fetchCases();
     state.idx = 0;
@@ -442,8 +442,8 @@ function render() {
   var casesCount = Array.isArray(state.cases) ? state.cases.length : 0;
 
   if (casesCount === 0) {
-    $("#counter").textContent = "Case 0 / 0";
-    container.innerHTML = '<div class="empty">No cases loaded</div>';
+    $("#counter").textContent = "Кейс 0 / 0";
+    container.innerHTML = '<div class="empty">Кейсы не загружены</div>';
     $("#prev").disabled = true;
     $("#next").disabled = true;
     return;
@@ -452,7 +452,7 @@ function render() {
   if (idx < 0) idx = 0;
   if (idx > casesCount - 1) idx = casesCount - 1;
   state.idx = idx;
-  $("#counter").textContent = "Case " + (idx + 1) + " / " + casesCount;
+  $("#counter").textContent = "Кейс " + (idx + 1) + " / " + casesCount;
 
   var steps = state.cases[idx] || [];
   var frag = document.createDocumentFragment();
@@ -461,7 +461,7 @@ function render() {
   var ov = document.createElement("div"); ov.className = "overview";
   var names = steps.map(function(s){ return (s && s.step) ? s.step : "unknown"; });
   ov.innerHTML = '<div class="overview-head"><span class="overview-label">Pipeline</span>' +
-    '<span class="overview-count">' + steps.length + ' steps</span></div>' +
+    '<span class="overview-count">' + steps.length + ' шагов</span></div>' +
     '<div class="flow">' +
     names.map(function(n){ return '<span class="flow-chip">' + escapeHtml(n) + '</span>'; })
          .join('<span class="flow-arr">\u2192</span>') + '</div>';
@@ -500,7 +500,7 @@ function render() {
     var hdr = document.createElement("div"); hdr.className = "step-header";
     hdr.innerHTML = '<div class="step-num">' + (i+1) + '</div>' +
       '<div class="step-info"><div class="step-title">' + escapeHtml(stepName) + '</div>' +
-      '<div class="step-sub">' + memKeys.length + ' memory fields</div></div>' +
+      '<div class="step-sub">' + memKeys.length + ' полей памяти</div></div>' +
       '<div class="step-chev' + (isOpen ? ' open' : '') + '">\u25B6</div>';
 
     var body = document.createElement("div");
@@ -508,14 +508,14 @@ function render() {
     var inner = document.createElement("div"); inner.className = "step-body-inner";
 
     if (memKeys.length === 0) {
-      inner.innerHTML = '<div class="mem-item" style="color:var(--text-2);font-size:12px">No memory</div>';
+      inner.innerHTML = '<div class="mem-item" style="color:var(--text-2);font-size:12px">Память отсутствует</div>';
     } else {
       memKeys.forEach(function(k) {
         var val = memory[k];
         var item = document.createElement("div"); item.className = "mem-item";
         var mh = document.createElement("div"); mh.className = "mem-head";
         var ks = document.createElement("span"); ks.className = "mem-key"; ks.textContent = k;
-        var cb = document.createElement("button"); cb.className = "copy-btn"; cb.textContent = "\u590D\u5236";
+        var cb = document.createElement("button"); cb.className = "copy-btn"; cb.textContent = "Копировать";
         mh.appendChild(ks); mh.appendChild(cb); item.appendChild(mh);
 
         var copyText = "";
@@ -551,8 +551,8 @@ function render() {
 
         cb.addEventListener("click", function() {
           navigator.clipboard.writeText(copyText || "").then(function() {
-            cb.textContent = "\u5DF2\u590D\u5236";
-            setTimeout(function(){ cb.textContent = "\u590D\u5236"; }, 1200);
+            cb.textContent = "Скопировано";
+            setTimeout(function(){ cb.textContent = "Копировать"; }, 1200);
           });
         });
         inner.appendChild(item);
@@ -583,7 +583,7 @@ function toggleAll() {
   var allOpen = bodies.length > 0 && bodies.every(function(c){ return c.classList.contains("open"); });
   bodies.forEach(function(c){ if (allOpen) c.classList.remove("open"); else c.classList.add("open"); });
   chevs.forEach(function(c){ if (allOpen) c.classList.remove("open"); else c.classList.add("open"); });
-  if (btn) btn.textContent = allOpen ? "\u5168\u90E8\u5C55\u5F00" : "\u5168\u90E8\u6536\u8D77";
+  if (btn) btn.textContent = allOpen ? "Развернуть все" : "Свернуть все";
 }
 
 function goto(delta) {
@@ -652,7 +652,7 @@ def api_reload():
         auto_roots = _collect_image_dirs(STATE.cases)
         if auto_roots:
             STATE.static_roots = auto_roots
-        return JSONResponse({"ok": True, "count": len(STATE.cases), "msg": "reloaded"})
+        return JSONResponse({"ok": True, "count": len(STATE.cases), "msg": "перезагружено"})
     except Exception as e:
         return JSONResponse({"ok": False, "error": str(e)}, status_code=500)
 
@@ -673,7 +673,7 @@ def api_switch(file: str):
     allowed = {os.path.realpath(f) for f in STATE.data_files}
     if real_file not in allowed:
         return JSONResponse(
-            {"ok": False, "error": "File not in allowed list"}, status_code=403
+            {"ok": False, "error": "Файл не в списке разрешённых"}, status_code=403
         )
     try:
         STATE.data_path = file

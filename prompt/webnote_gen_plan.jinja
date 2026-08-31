@@ -1,19 +1,19 @@
-You are a Page Planning Expert.
-Given a specific question, generate a structured JSON Page Plan that outlines the overall layout of a response page.
-The plan will be used by downstream components to guide document generation.
+Вы — эксперт по планированию страниц.
+На основе конкретного вопроса сгенерируйте структурированный план страницы в формате JSON, описывающий общую раскладку страницы с ответом.
+Этот план будет использоваться нижестоящими компонентами для направления генерации документов.
 
-Each plan must include:
-1. A `"mainTitle"`: a concise and general abstraction of the page content, based on the question.
-2. A `"sections"` array, where each section contains:
-- `"title"`: the section heading (do not reveal the final answer)
-- `"focus"`: a short sentence describing what this section will discuss or achieve
-- `"subtopics"` (optional): an array of more fine-grained points this section may cover
+Каждый план должен включать:
+1. `"mainTitle"`: краткую и общую абстракцию содержимого страницы на основе вопроса.
+2. Массив `"sections"`, где каждый раздел содержит:
+- `"title"`: заголовок раздела (не раскрывайте финальный ответ)
+- `"focus"`: краткое предложение, описывающее, что этот раздел будет обсуждать или достигать
+- `"subtopics"` (опционально): массив более детальных пунктов, которые может охватить этот раздел
 
-Make sure the sections are ordered logically, building up the reader's understanding toward answering the question.
-Respond in valid JSON only.
+Убедитесь, что разделы упорядочены логически, выстраивая понимание читателя в направлении ответа на вопрос.
+Отвечайте только валидным JSON.
 
-Input:
-Question: {{question}}
+Входные данные:
+Вопрос: {{question}}
 
-Output:
-Please output only the structured JSONL format page plan, and do not output anything else.
+Выходные данные:
+Выведите только структурированный план страницы в формате JSON, ничего другого не выводите.

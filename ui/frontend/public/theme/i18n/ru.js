@@ -200,7 +200,7 @@ window.I18N_LOCALES.ru = {
   kb_upload_error: "Ошибка загрузки:",
   kb_delete_collection_action: "Удалить эту базу знаний",
   kb_delete_file_action: "Удалить этот файл",
-  kb_delete_confirm_message: "Подтвердить永久{action} ({name})?",
+  kb_delete_confirm_message: "Подтвердить {action} ({name})?",
   kb_delete_confirm_title: "Подтверждение удаления",
   kb_delete_failed: "Ошибка удаления:",
   kb_delete_no_permission_title: "Нет прав на удаление",

@@ -38,7 +38,7 @@ window.I18N_LOCALES.en = {
   auth_account_back: "Back",
   auth_nickname_title: "Set Nickname",
   auth_nickname_label: "Nickname",
-  auth_nickname_placeholder: "Chinese or English nickname",
+  auth_nickname_placeholder: "Any nickname",
   auth_nickname_hint: "Leave empty to clear nickname.",
   auth_nickname_action: "Save Nickname",
   auth_nickname_saving: "Saving nickname...",
