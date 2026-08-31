@@ -1,43 +1,43 @@
-# Contributing
+# Вклад в проект
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
-Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+При внесении вклада в этот репозиторий, пожалуйста, сначала обсудите желаемое изменение через issue, email или любой другой способ с владельцами этого репозитория, прежде чем вносить изменение.
+Пожалуйста, ознакомьтесь с нашим [кодексом поведения](CODE_OF_CONDUCT.md) и следуйте ему во всех взаимодействиях с проектом.
 
-## Development environment setup
+## Настройка окружения разработки
 
 > **[?]**
-> Proceed to describe how to setup local development environment.
-> e.g:
+> Опишите, как настроить локальное окружение разработки.
+> Например:
 
-To set up a development environment, please follow these steps:
+Для настройки окружения разработки, пожалуйста, выполните следующие шаги:
 
-1. Clone the repo
+1. Клонируйте репозиторий
 
    ```sh
    git clone https://github.com/OpenBMB/UltraRAG
    ```
 2. TODO
 
-## Issues and feature requests
+## Задачи и запросы функций
 
-You've found a bug in the source code, a mistake in the documentation or maybe you'd like a new feature? You can help us by [submitting an issue on GitHub](https://github.com/OpenBMB/UltraRAG/issues). Before you create an issue, make sure to search the issue archive -- your issue may have already been addressed!
+Вы нашли баг в исходном коде, ошибку в документации или хотели бы новую функцию? Вы можете помочь нам, [создав issue на GitHub](https://github.com/OpenBMB/UltraRAG/issues). Прежде чем создавать issue, убедитесь, что выполнили поиск в архиве — ваша задача уже может быть решена!
 
-Please try to create bug reports that are:
+Пожалуйста, старайтесь создавать отчёты о багах, которые являются:
 
-- _Reproducible._ Include steps to reproduce the problem.
-- _Specific._ Include as much detail as possible: which version, what environment, etc.
-- _Unique._ Do not duplicate existing opened issues.
-- _Scoped to a Single Bug._ One bug per report.
+- _Воспроизводимыми._ Включите шаги для воспроизведения проблемы.
+- _Конкретными._ Укажите как можно больше деталей: версия, окружение и т.д.
+- _Уникальными._ Не дублируйте существующие открытые задачи.
+- _Ограниченными одним багом._ Один баг на один отчёт.
 
-**Even better: Submit a pull request with a fix or new feature!**
+**Ещё лучше: отправьте Pull Request с исправлением или новой функцией!**
 
-### How to submit a Pull Request
+### Как отправить Pull Request
 
-1. Search our repository for open or closed
-   [Pull Requests](https://github.com/OpenBMB/UltraRAG/pulls)
-   that relate to your submission. You don't want to duplicate effort.
-2. Fork the project
-3. Create your feature branch (`git checkout -b feat/amazing_feature`)
-4. Commit your changes (`git commit -m 'feat: add amazing_feature'`) UltraRAG uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
-5. Push to the branch (`git push origin feat/amazing_feature`)
-6. [Open a Pull Request](https://github.com/OpenBMB/UltraRAG/compare?expand=1)
+1. Поищите в репозитории открытые или закрытые
+   [Pull Requests](https://github.com/OpenBMB/UltraRAG/pulls),
+   связанные с вашей задачей, чтобы не дублировать работу.
+2. Сделайте fork проекта
+3. Создайте ветку для вашей функции (`git checkout -b feat/amazing_feature`)
+4. Зафиксируйте ваши изменения (`git commit -m 'feat: add amazing_feature'`) UltraRAG использует [conventional commits](https://www.conventionalcommits.org), пожалуйста, следуйте спецификации в сообщениях коммитов.
+5. Отправьте в ветку (`git push origin feat/amazing_feature`)
+6. [Откройте Pull Request](https://github.com/OpenBMB/UltraRAG/compare?expand=1)

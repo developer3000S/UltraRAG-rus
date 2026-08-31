@@ -1,0 +1,118 @@
+# =================================================================
+# ПАРАМЕТРЫ ДЛЯ МЕДИЦИНСКОГО RAG
+# 36 документов, ~12 МБ (МКБ-10, приказы, ФЗ-323, клинические рекомендации)
+# =================================================================
+
+# =================================================================
+# CORPUS SERVER — нарезка документов на чанки
+# =================================================================
+parse_file_path:        /home/user/MEGA/suvorov_disk/rag_docs/   # ваша папка
+text_corpus_save_path:  my_rag/corpora/text.jsonl
+image_corpus_save_path: my_rag/corpora/image.jsonl
+
+mineru_dir:             my_rag/corpora/
+mineru_extra_params:
+  source: modelscope
+
+raw_chunk_path:         my_rag/corpora/text.jsonl
+chunk_path:             my_rag/corpora/chunks.jsonl
+use_title:              true                                     # для медицинских PDF с разделами
+chunk_backend:          sentence                                 # хорошо для русского текста
+chunk_size:             512                                      # оптимально для МКБ/приказов
+chunk_backend_configs:
+  sentence:
+    chunk_overlap: 80                                          # ↑ для длинных юридических формулировок
+    min_sentences_per_chunk: 1
+    delim: "['.', '!', '?', '；', '。', '！', '？', '\\n']"
+  token:
+    chunk_overlap: 50
+  recursive:
+    min_characters_per_chunk: 12
+
+# =================================================================
+# RETRIEVER SERVER — эмбеддер + индекс
+# =================================================================
+# ⚠️ MiniCPM-Embedding-Light обучен преимущественно на английском.
+#    Для русского медицинского текста рекомендуется:
+#    1) `intfloat/multilingual-e5-large` (~2.2 GB) — топ по русскому
+#    2) `ai-forever/sbert_large_nlu_ru` — отечественная, отлично для RU
+#    3) `cointegrated/rubert-tiny2` — лёгкая, 312 MB, для слабых машин
+#    4) оставить MiniCPM-Embedding-Light — если хочется стандартный путь
+model_name_or_path:     ai-forever/sbert_large_nlu_ru             # >>> лучший выбор для RU-медицины
+corpus_path:            my_rag/corpora/chunks.jsonl
+embedding_path:         my_rag/index/embedding.npy
+collection_name:        suvorov_med
+
+backend:                sentence_transformers
+backend_configs:
+  sentence_transformers:
+    trust_remote_code: true
+    sentence_transformers_encode:
+      normalize_embeddings: true                                # E5 требует нормализацию
+      encode_chunk_size: 64                                     # ↓ для слабых GPU
+      q_prompt_name: null
+      psg_prompt_name: null
+  openai:
+    model_name: text-embedding-3-large
+    base_url: "https://api.openai.com/v1"
+    api_key: ""                                                # >>> API-ключ если выберете OpenAI
+
+index_backend:          faiss                                    # проще всего; milvus — если нужна параллельная работа
+index_backend_configs:
+  faiss:
+    index_use_gpu: false                                       # >>> true если есть GPU
+    index_chunk_size: 10000
+    index_path: my_rag/index/faiss.index
+  milvus:
+    uri: my_rag/index/milvus.db
+    token: null
+    id_field_name: id
+    vector_field_name: vector
+    text_field_name: contents
+
+batch_size:             16
+top_k:                  5                                       # для медицины 3-5 — точнее
+gpu_ids:                "0"
+is_multimodal:          false
+overwrite:              true
+retriever_url:          "http://127.0.0.1:64501"
+query_instruction:      ""                                      # для E5: "query: " префикс
+
+# =================================================================
+# GENERATION SERVER — LLM
+# =================================================================
+backend:                openai
+backend_configs:
+  openai:
+    model_name: free-stack
+    base_url: "http://147.45.125.8:20128/api/v1"
+    api_key: "sk-1800d23ea02c1a65-99c43d-00a3eefb"
+    concurrency: 4
+    retries: 3
+    timeout: 120
+
+sampling_params:
+  temperature: 0.1                                              # низкая = точнее для медицины
+  top_p: 0.9
+  max_tokens: 2048
+
+system_prompt: |                                                # >>> для медицины — критично
+  Ты — медицинский ассистент. Отвечай ТОЛЬКО на основе предоставленного контекста из документов.
+  Если ответа в документах нет — честно скажи: "В предоставленных документах информации нет".
+  Всегда цитируй источник (документ и раздел).
+  Не давай диагнозы и не назначай лечение — это справочная информация.
+
+extra_params:
+  chat_template_kwargs:
+    enable_thinking: false
+
+# =================================================================
+# MEMORY SERVER — turn-level память
+# =================================================================
+memory_path:            my_rag/output/memory.json
+memory_window:          4                                       # для чата по медицине
+
+# =================================================================
+# INPUT
+# =================================================================
+input_file:             my_rag/questions.jsonl

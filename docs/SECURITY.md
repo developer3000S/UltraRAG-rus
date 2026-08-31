@@ -1,14 +1,14 @@
-# Security Policy
+# Политика безопасности
 
-## Reporting a Vulnerability
+## Сообщение об уязвимости
 
-If there are any vulnerabilities in **UltraRAG**, don't hesitate to _report them_.
+Если в **UltraRAG** обнаружены уязвимости, не стесняйтесь **сообщить о них**.
 
-1. To facilitate the reporting of security issues, kindly send your detailed security report to our dedicated email address: ultrarag.team@gmail.com
-2. Describe the vulnerability.
+1. Для упрощения сообщения о проблемах безопасности, пожалуйста, отправьте подробный отчёт о безопасности на наш выделенный адрес электронной почты: ultrarag.team@gmail.com
+2. Опишите уязвимость.
 
-   If you have a fix, that is most welcome -- please attach or summarize it in your message!
-3. We will evaluate the vulnerability and, if necessary, release a fix or mitigating steps to address it. We will contact you to let you know the outcome, and will credit you in the report.
+   Если у вас есть исправление, оно будет приветствоваться — пожалуйста, приложите или опишите его в сообщении!
+3. Мы оценим уязвимость и, при необходимости, выпустим исправление или меры по смягчению последствий. Мы свяжемся с вами, чтобы сообщить о результате, и укажем вас в отчёте.
 
-   Please **do not disclose the vulnerability publicly** until a fix is released!
-4. Once we have either a) published a fix, or b) declined to address the vulnerability for whatever reason, you are free to publicly disclose it.
+   Пожалуйста, **не раскрывайте уязвимость публично**, пока исправление не будет выпущено!
+4. Как только мы либо а) опубликуем исправление, либо б) откажемся от устранения уязвимости по какой-либо причине, вы можете свободно раскрыть её публично.

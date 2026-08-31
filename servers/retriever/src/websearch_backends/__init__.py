@@ -8,7 +8,7 @@ from .base import BaseWebSearchBackend
 _WEBSEARCH_BACKENDS: Dict[str, str] = {
     "exa": ".exa_backend.ExaWebSearchBackend",
     "tavily": ".tavily_backend.TavilyWebSearchBackend",
-    "zhipuai": ".zhipuai_backend.ZhipuaiWebSearchBackend",
+    "omniroute": ".omniroute_backend.OmnirouteWebSearchBackend",
 }
 
 

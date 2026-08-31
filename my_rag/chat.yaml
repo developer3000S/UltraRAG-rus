@@ -1,0 +1,28 @@
+# ============================================================
+# Шаг 3: RAG-чат (multi-turn с памятью)
+# ============================================================
+servers:
+  retriever:    servers/retriever
+  generation:   servers/generation
+  prompt:       servers/prompt
+  memory:       servers/memory
+  custom:       servers/custom
+
+pipeline:
+  # --- Инициализация ---
+  - memory.get_global_memory
+  - retriever.retriever_init
+  - generation.generation_init
+
+  # --- Retrieval с памятью (project_memory_search дополняет запрос
+  #     историей диалога для когерентных follow-up вопросов) ---
+  - retriever.retriever_project_memory_search
+  - retriever.retriever_search
+
+  # --- Генерация с цитированием источников ---
+  - custom.assign_citation_ids
+  - prompt.qa_rag_with_memory
+  - generation.generate
+
+  # --- Сохраняем ответ в память для следующего хода ---
+  - memory.save_memory

@@ -54,7 +54,7 @@ index_backend_configs:
       params: {}
     index_chunk_size: 1000
 
-websearch_backend: tavily # options: tavily, exa, zhipuai
+websearch_backend: omniroute # options: tavily, exa, omniroute
 websearch_backend_configs:
   exa:
     api_key: ""
@@ -66,13 +66,11 @@ websearch_backend_configs:
     retries: 3
     base_delay: 1.0
     search_kwargs: {}
-  zhipuai:
+  omniroute:
     api_key: ""
-    base_url: "https://open.bigmodel.cn/api/paas/v4/web_search"
-    search_engine: "search_std"
-    search_intent: false
-    search_recency_filter: "noLimit"
-    content_size: "medium"
+    host: "http://147.45.125.8:20128"
+    api_path: "/api/v1"
+    model: "free-stack"
     retries: 3
     base_delay: 1.0
     search_kwargs: {}

@@ -1,0 +1,9 @@
+# ============================================================
+# Шаг 2: Построение индекса (embedding + FAISS/Milvus)
+# ============================================================
+servers:
+  retriever: servers/retriever
+
+pipeline:
+  - retriever.retriever_init
+  - retriever.retriever_index

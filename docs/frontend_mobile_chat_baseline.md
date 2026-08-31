@@ -1,51 +1,51 @@
-# Frontend Mobile Optimization Baseline (Chat + Common Menus)
+# Базовый уровень мобильной оптимизации фронтенда (Чат + Общие меню)
 
-This baseline records desktop behavior before mobile-only optimizations are applied.
-It is used as a regression checklist to ensure desktop UX remains unchanged.
+Этот baseline фиксирует поведение десктопной версии до применения оптимизаций, специфичных только для мобильных устройств.
+Он используется как чек-лист регрессий для обеспечения неизменности десктопного UX.
 
-## Scope
+## Область действия
 
-- Route: `/chat`
-- Main page: `ui/frontend/src/pages/ChatPage.tsx`
-- Desktop layout styles: `ui/frontend/public/theme/style.css`
-- Dialog and shared UI styles: `ui/frontend/src/app/styles/globals.css`
+- Роут: `/chat`
+- Главная страница: `ui/frontend/src/pages/ChatPage.tsx`
+- Стили десктопной раскладки: `ui/frontend/public/theme/style.css`
+- Стили диалогов и общих компонентов UI: `ui/frontend/src/app/styles/globals.css`
 
-## Desktop Baseline (Must Stay Unchanged)
+## Десктопный baseline (должен оставаться неизменным)
 
-1. Sidebar behavior
-   - Sidebar is always visible on desktop.
-   - Collapsed mode works with the current collapse button.
-   - Session list interactions (open, rename, delete) behave as before.
+1. Поведение боковой панели
+   - Боковая панель всегда видна на десктопе.
+   - Режим свёрнутого состояния работает с текущей кнопкой сворачивания.
+   - Взаимодействия со списком сессий (открытие, переименование, удаление) работают как прежде.
 
-2. Header and top controls
-   - Pipeline selector layout and dropdown behavior stay unchanged.
-   - Status badge (Ready / Loading / Failed) display and position stay unchanged.
+2. Шапка и верхние элементы управления
+   - Раскладка селектора pipeline и поведение выпадающего списка остаются неизменными.
+   - Отображение и позиция бейджа статуса (Готов / Загрузка / Ошибка) остаются неизменными.
 
-3. Chat area
-   - Message list spacing and scroll behavior remain unchanged.
-   - Input container layout, send/stop button positions, and KB selector behavior remain unchanged.
+3. Область чата
+   - Интервалы списка сообщений и поведение прокрутки остаются неизменными.
+   - Раскладка контейнера ввода, позиции кнопок отправки/остановки и поведение KB-селектора остаются неизменными.
 
-4. Common menus and dialogs
-   - Settings dropdown and language submenu behavior remain unchanged.
-   - Auth dialog and account settings dialog dimensions and interactions remain unchanged.
+4. Общие меню и диалоги
+   - Поведение выпадающего меню настроек и подменю языка остаются неизменными.
+   - Размеры и взаимодействия диалогов авторизации и настроек аккаунта остаются неизменными.
 
-5. Detail panel
-   - Reference detail sidebar open/close behavior remains unchanged.
+5. Панель деталей
+   - Поведение открытия/закрытия боковой панели деталей ссылок остаётся неизменным.
 
-## Regression Viewports
+## Регрессионные вьюпорты
 
-- Desktop: `1440x900`
-- Desktop narrow: `1280x800`
-- Tablet: `992x768` and `820x1180`
-- Mobile: `390x844` (optimization target)
+- Десктоп: `1440x900`
+- Десктоп узкий: `1280x800`
+- Планшет: `992x768` и `820x1180`
+- Мобильный: `390x844` (цель оптимизации)
 
-## Desktop Regression Checklist
+## Чек-лист десктопной регрессии
 
-- [ ] Sidebar collapse/expand
-- [ ] New chat + session switching
-- [ ] Pipeline dropdown select flow
-- [ ] Settings dropdown + language submenu hover/click
-- [ ] Auth dialog open/close
-- [ ] Account dialog open/close and scrolling
-- [ ] Chat send/stop flow
-- [ ] Citation click and detail panel open/close
+- [ ] Сворачивание/разворачивание боковой панели
+- [ ] Новый чат + переключение сессий
+- [ ] Процесс выбора pipeline через выпадающий список
+- [ ] Выпадающее меню настроек + наведение/клик подменю языка
+- [ ] Открытие/закрытие диалога авторизации
+- [ ] Открытие/закрытие диалога аккаунта и прокрутка
+- [ ] Процесс отправки/остановки чата
+- [ ] Клик по ссылке и открытие/закрытие панели деталей

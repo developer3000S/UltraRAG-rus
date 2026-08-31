@@ -7,7 +7,7 @@
 </p>
 
 <h3 align="center">
-Less Code, Lower Barrier, Faster Deployment
+Меньше кода, ниже порог входа, быстрее развёртывание
 </h3>
 
 <p align="center">
@@ -15,56 +15,51 @@ Less Code, Lower Barrier, Faster Deployment
 </p>
 
 <p align="center">
-  <a href="https://ultrarag.github.io/"><img src="https://img.shields.io/badge/Homepage-6ABED8?style=for-the-badge&logoColor=white" alt="Homepage"/></a>&nbsp;
-  <a href="https://ultrarag.openbmb.cn/pages/en/getting_started/introduction"><img src="https://img.shields.io/badge/Documentation-66B89E?style=for-the-badge&logo=bookstack&logoColor=white" alt="Documentation"/></a>&nbsp;
-  <a href="https://modelscope.cn/datasets/UltraRAG/UltraRAG_Benchmark"><img src="https://img.shields.io/badge/Dataset-DE8EA6?style=for-the-badge&logo=databricks&logoColor=white" alt="Dataset"/></a>&nbsp;
-  <a href="https://github.com/OpenBMB/UltraRAG/tree/rag-paper-daily/rag-paper-daily"><img src="https://img.shields.io/badge/Paper_Daily-A48BC8?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper Daily"/></a>
-</p>
-
-<p align="center">
-  <a href="./docs/README_zh.md"><b>简体中文</b></a> &nbsp;|&nbsp; <b>English</b>
+  <a href="https://ultrarag.github.io/"><img src="https://img.shields.io/badge/Homepage-6ABED8?style=for-the-badge&logoColor=white" alt="Главная"/></a>&nbsp;
+  <a href="https://ultrarag.openbmb.cn/pages/en/getting_started/introduction"><img src="https://img.shields.io/badge/Documentation-66B89E?style=for-the-badge&logo=bookstack&logoColor=white" alt="Документация"/></a>&nbsp;
+  <a href="https://modelscope.cn/datasets/UltraRAG/UltraRAG_Benchmark"><img src="https://img.shields.io/badge/Dataset-DE8EA6?style=for-the-badge&logo=databricks&logoColor=white" alt="Набор данных"/></a>&nbsp;
+  <a href="https://github.com/OpenBMB/UltraRAG/tree/rag-paper-daily/rag-paper-daily"><img src="https://img.shields.io/badge/Paper_Daily-A48BC8?style=for-the-badge&logo=arxiv&logoColor=white" alt="Дайджест статей"/></a>
 </p>
 
 ---
 
+**Последние новости** 🔥
 
-**Latest News** 🔥
-
-- **[2026.01.23]** 🎉 UltraRAG 3.0 Released: Say no to "black box" development—make every line of reasoning logic clearly visible 👉 [📖 Blog](https://github.com/OpenBMB/UltraRAG/blob/page/project/blog/en/ultrarag3_0.md)
-- **[2026.01.20]** 🎉 AgentCPM-Report Model Released! DeepResearch is finally localized: 8B on-device writing agent AgentCPM-Report is open-sourced 👉 [🤗 Model](https://huggingface.co/openbmb/AgentCPM-Report)
+- **[2026.01.23]** 🎉 Релиз UltraRAG 3.0: скажите «нет» чёрному ящику в разработке — сделайте видимой каждую строку логики рассуждений 👉 [📖 Блог](https://github.com/OpenBMB/UltraRAG/blob/page/project/blog/en/ultrarag3_0.md)
+- **[2026.01.20]** 🎉 Релиз модели AgentCPM-Report! DeepResearch наконец-то локализован: 8B on-device агент для написания отчётов AgentCPM-Report с открытым исходным кодом 👉 [🤗 Модель](https://huggingface.co/openbmb/AgentCPM-Report)
 
 <details>
-<summary><b>Previous News</b></summary>
+<summary><b>Предыдущие новости</b></summary>
 <br>
 
-- **[2025.11.11]** 🎉 UltraRAG 2.1 Released: Enhanced knowledge ingestion & multimodal support, with a more complete unified evaluation system!
-- **[2025.09.23]** New daily RAG paper digest, updated every day 👉 [📖 Papers](https://github.com/OpenBMB/UltraRAG/tree/rag-paper-daily/rag-paper-daily)
-- **[2025.09.09]** Released a Lightweight DeepResearch Pipeline local setup tutorial 👉 [📺 bilibili](https://www.bilibili.com/video/BV1p8JfziEwM) · [📖 Blog](https://github.com/OpenBMB/UltraRAG/blob/page/project/blog/en/01_build_light_deepresearch.md)
-- **[2025.09.01]** Released a step-by-step UltraRAG installation and full RAG walkthrough video 👉 [📺 bilibili](https://www.bilibili.com/video/BV1B9apz4E7K/?share_source=copy_web&vd_source=7035ae721e76c8149fb74ea7a2432710) · [📖 Blog](https://github.com/OpenBMB/UltraRAG/blob/page/project/blog/en/00_Installing_and_Running_RAG.md)
-- **[2025.08.28]** 🎉 UltraRAG 2.0 Released! UltraRAG 2.0 is fully upgraded: build a high-performance RAG with just a few dozen lines of code, empowering researchers to focus on ideas and innovation! We have preserved the UltraRAG v2 code, which can be viewed at [v2](https://github.com/OpenBMB/UltraRAG/tree/v2).
-- **[2025.01.23]** UltraRAG Released! Enabling large models to better comprehend and utilize knowledge bases. The UltraRAG 1.0 code is still available at [v1](https://github.com/OpenBMB/UltraRAG/tree/v1).
+- **[2025.11.11]** 🎉 Релиз UltraRAG 2.1: улучшенный приём знаний и мультимодальная поддержка, более полная унифицированная система оценки!
+- **[2025.09.23]** Новый ежедневный дайджест RAG-статей, обновляется каждый день 👉 [📖 Статьи](https://github.com/OpenBMB/UltraRAG/tree/rag-paper-daily/rag-paper-daily)
+- **[2025.09.09]** Выпущено руководство по локальной настройке Lightweight DeepResearch Pipeline 👉 [📺 bilibili](https://www.bilibili.com/video/BV1p8JfziEwM) · [📖 Блог](https://github.com/OpenBMB/UltraRAG/blob/page/project/blog/en/01_build_light_deepresearch.md)
+- **[2025.09.01]** Выпущено пошаговое видео по установке UltraRAG и полному RAG-туру 👉 [📺 bilibili](https://www.bilibili.com/video/BV1B9apz4E7K/?share_source=copy_web&vd_source=7035ae721e76c8149fb74ea7a2432710) · [📖 Блог](https://github.com/OpenBMB/UltraRAG/blob/page/project/blog/en/00_Installing_and_Running_RAG.md)
+- **[2025.08.28]** 🎉 Релиз UltraRAG 2.0! UltraRAG 2.0 полностью обновлён: создайте высокопроизводительный RAG всего парой десятков строк кода, предоставьте исследователям возможность сосредоточиться на идеях и инновациях! Код UltraRAG v2 сохранён и доступен в [v2](https://github.com/OpenBMB/UltraRAG/tree/v2).
+- **[2025.01.23]** Релиз UltraRAG! Позволяет большим моделям лучше понимать и использовать базы знаний. Код UltraRAG 1.0 всё ещё доступен в [v1](https://github.com/OpenBMB/UltraRAG/tree/v1).
 
 </details>
 
 ---
 
-## 💡 About UltraRAG
+## 💡 О UltraRAG
 
-UltraRAG is the first lightweight RAG development framework based on the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) architecture design, jointly launched by [THUNLP](https://nlp.csai.tsinghua.edu.cn/) at Tsinghua University, [NEUIR](https://neuir.github.io) at Northeastern University, [OpenBMB](https://www.openbmb.cn/home), and [AI9stars](https://github.com/AI9Stars).
+UltraRAG — это первый лёгкий фреймворк для разработки RAG на основе архитектуры [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), совместно запущенный [THUNLP](https://nlp.csai.tsinghua.edu.cn/) Университета Цинхуа, [NEUIR](https://neuir.github.io) Северо-Восточного университета, [OpenBMB](https://www.openbmb.cn/home) и [AI9stars](https://github.com/AI9Stars).
 
-Designed for research exploration and industrial prototyping, UltraRAG standardizes core RAG components (Retriever, Generation, etc.) as independent **MCP Servers**, combined with the powerful workflow orchestration capabilities of the **MCP Client**. Developers can achieve precise orchestration of complex control structures such as conditional branches and loops simply through YAML configuration.
+Разработанный для исследовательских экспериментов и промышленного прототипирования, UltraRAG стандартизирует основные компоненты RAG (Retriever, Generation и т.д.) как независимые **MCP-серверы**, объединённые с мощными возможностями оркестрации рабочих процессов **MCP Client**. Разработчики могут достичь точной оркестрации сложных управляющих структур, таких как условные ветвления и циклы, просто через конфигурацию YAML.
 
 <p align="center">
   <picture>
-    <img alt="UltraRAG Architecture" src="./docs/architecture.png" width=90%>
+    <img alt="Архитектура UltraRAG" src="./docs/architecture.png" width=90%>
   </picture>
 </p>
 
 ### 🖥️ UltraRAG UI
 
-UltraRAG UI transcends the boundaries of traditional chat interfaces, evolving into a visual RAG Integrated Development Environment (IDE) that combines orchestration, debugging, and demonstration.
+UltraRAG UI выходит за рамки традиционных интерфейсов чата, превращаясь в визуальную интегрированную среду разработки RAG (IDE), объединяющую оркестрацию, отладку и демонстрацию.
 
-The system features a powerful built-in Pipeline Builder that supports bidirectional real-time synchronization between "Canvas Construction" and "Code Editing," allowing for granular online adjustments of pipeline parameters and prompts. Furthermore, it introduces an Intelligent AI Assistant to empower the entire development lifecycle, from pipeline structural design to parameter tuning and prompt generation. Once constructed, logic flows can be converted into interactive dialogue systems with a single click. The system seamlessly integrates Knowledge Base Management components, enabling users to build custom knowledge bases for document Q&A. This truly realizes a one-stop closed loop, spanning from underlying logic construction and data governance to final application deployment.
+Система включает мощный встроенный конструктор Pipeline с поддержкой двунаправленной синхронизации в реальном времени между «конструированием на холсте» и «редактированием кода», позволяющий детально настраивать параметры pipeline и промпты онлайн. Кроме того, она представляет интеллектуального AI-ассистента для поддержки всего жизненного цикла разработки — от проектирования структуры pipeline до настройки параметров и генерации промптов. Готовые логические потоки можно одним кликом преобразовать в интерактивные диалоговые системы. Система легко интегрирует компоненты управления базой знаний, позволяя пользователям создавать собственные базы знаний для вопросно-ответной системы по документам. Это по-настоящему реализует замкнутый цикл — от построения базовой логики и управления данными до финального развёртывания приложения.
 
 <!-- <p align="center">
   <picture>
@@ -76,96 +71,94 @@ The system features a powerful built-in Pipeline Builder that supports bidirecti
 https://github.com/user-attachments/assets/fcf437b7-8b79-42f2-bf4e-e3b7c2a896b9
 
 
-### ✨ Key Highlights
+### ✨ Ключевые особенности
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**🚀 Low-Code Orchestration of Complex Workflows**
+**🚀 Low-Code оркестрация сложных рабочих процессов**
 
-**Inference Orchestration**: Natively supports control structures such as sequential, loop, and conditional branches. Developers only need to write YAML configuration files to implement complex iterative RAG logic in dozens of lines of code.
+**Оркестрация вывода**: нативная поддержка управляющих структур, таких как последовательное выполнение, циклы и условные ветвления. Разработчикам нужно только написать YAML-конфигурацию для реализации сложной итеративной RAG-логики десятками строк кода.
 
 </td>
 <td width="50%" valign="top">
 
-**⚡ Modular Extension and Reproduction**
+**⚡ Модульное расширение и воспроизводимость**
 
-**Atomic Servers**: Based on the MCP architecture, functions are decoupled into independent Servers. New features only need to be registered as function-level Tools to seamlessly integrate into workflows, achieving extremely high reusability.
+**Атомарные серверы**: на основе архитектуры MCP функции декомпозированы в независимые серверы. Новые функции достаточно зарегистрировать как Tools уровня функций для бесшовной интеграции в рабочие процессы, обеспечивая чрезвычайно высокую переиспользуемость.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-**📊 Unified Evaluation and Benchmark Comparison**
+**📊 Унифицированная оценка и сравнение бенчмарков**
 
-**Research Efficiency**: Built-in standardized evaluation workflows, ready-to-use mainstream research benchmarks. Through unified metric management and baseline integration, significantly improves experiment reproducibility and comparison efficiency.
+**Эффективность исследований**: встроенные стандартизированные рабочие процессы оценки, готовые к использованию основные исследовательские бенчмарки. Через унифицированное управление метриками и интеграцию базовых показателей значительно повышается воспроизводимость экспериментов и эффективность сравнения.
 
 </td>
 <td width="50%" valign="top">
 
-**🎯 Rapid Interactive Prototype Generation**
+**🎯 Быстрая генерация интерактивных прототипов**
 
-**One-Click Delivery**: Say goodbye to tedious UI development. With just one command, Pipeline logic can be instantly converted into an interactive conversational Web UI, shortening the distance from algorithm to demonstration.
+**Один клик для развёртывания**: прощайте утомительную разработку UI. Одной командой логика Pipeline мгновенно преобразуется в интерактивный веб-интерфейс чата, сокращая путь от алгоритма до демонстрации.
 
 </td>
 </tr>
 </table>
 
-## 📦 Installation
+## 📦 Установка
 
-We provide two installation methods: local source code installation (recommended using `uv` for package management) and Docker container deployment.
+Мы предоставляем два способа установки: установка из исходного кода (рекомендуется использовать `uv` для управления пакетами) и развёртывание в Docker-контейнере.
 
-### Method 1: Source Code Installation
+### Способ 1: Установка из исходного кода
 
-We strongly recommend using [uv](https://github.com/astral-sh/uv) to manage Python environments and dependencies, as it can greatly improve installation speed.
+Мы настоятельно рекомендуем использовать [uv](https://github.com/astral-sh/uv) для управления Python-средой и зависимостями, так как это значительно ускоряет установку.
 
-**Prepare Environment**
+**Подготовка окружения**
 
-If you haven't installed uv yet, please execute:
+Если uv ещё не установлен, выполните:
 
 ```shell
-## Direct installation
+## Прямая установка
 pip install uv==0.12.0
-## Download
+## Скачивание
 curl -LsSf https://astral.sh/uv/0.12.0/install.sh | sh
 ```
 
-**Download Source Code**
+**Скачивание исходного кода**
 
 ```shell
 git clone https://github.com/OpenBMB/UltraRAG.git --depth 1
 cd UltraRAG
 ```
 
-**Install Dependencies**
+**Установка зависимостей**
 
-Choose one of the following modes to install dependencies based on your use case:
+Выберите один из режимов установки зависимостей в соответствии с вашим случаем использования:
 
-**A: Create a New Environment** Use `uv sync` to automatically create a virtual environment and synchronize dependencies:
+**A: Создать новое окружение** Используйте `uv sync` для автоматического создания виртуального окружения и синхронизации зависимостей:
 
-- Core dependencies: If you only need to run basic core functions, such as only using UltraRAG UI:
+- Основные зависимости: если вам нужно только запустить базовые функции, например, только UltraRAG UI:
   ```shell
   uv sync
   ```
 
-- Full installation: If you want to fully experience UltraRAG's retrieval, generation, corpus processing, and evaluation functions, please run:
+- Полная установка: если вы хотите полностью использовать функции извлечения, генерации, обработки корпуса и оценки UltraRAG:
   ```shell
   uv sync --all-extras
   ```
-  This is the recommended team setup: every MCP server shares the same
-  `.venv` and `uv.lock`. Linux GPU dependencies are locked to CUDA 12.9,
-  including the official vLLM cu129 wheel.
+  Это рекомендуемая командная настройка: каждый MCP-сервер использует одно общее `.venv` и `uv.lock`. Зависимости GPU для Linux привязаны к CUDA 12.9, включая официальное vLLM cu129 колесо.
 
-- On-demand installation: If you only need to run specific modules, keep the corresponding `--extra` as needed, for example:
+- Установка по требованию: если вам нужно запускать только определённые модули, добавьте соответствующий `--extra` по необходимости, например:
 
   ```shell
-  uv sync --extra retriever   # Retrieval module only
-  uv sync --extra generation  # Generation module only
+  uv sync --extra retriever   # Только модуль извлечения
+  uv sync --extra generation  # Только модуль генерации
   ```
 
-Once installed, activate the virtual environment:
+После установки активируйте виртуальное окружение:
 
 ```shell
 # Windows CMD
@@ -178,142 +171,142 @@ Once installed, activate the virtual environment:
 source .venv/bin/activate
 ```
 
-**B: Install into an Existing Environment** To install UltraRAG into your currently active Python environment, use `uv pip`:
+**B: Установить в существующее окружение** Для установки UltraRAG в текущее активное Python-окружение используйте `uv pip`:
 
 ```shell
-# Core dependencies
+# Основные зависимости
 uv pip install -e .
 
-# Full installation
+# Полная установка
 uv pip install -e ".[all]"
 
-# On-demand installation
+# Установка по требованию
 uv pip install -e ".[retriever]"
 ```
 
-### Method 2: Docker Container Deployment
+### Способ 2: Развёртывание в Docker-контейнере
 
-If you prefer not to configure a local Python environment, you can deploy using Docker.
+Если вы предпочитаете не настраивать локальное Python-окружение, можете развернуть с помощью Docker.
 
-**Get Code and Images**
+**Получение кода и образов**
 
 ```shell
-# 1. Clone the repository
+# 1. Клонирование репозитория
 git clone https://github.com/OpenBMB/UltraRAG.git --depth 1
 cd UltraRAG
 
-# 2. Prepare the image (choose one)
-# Option A: Pull from Docker Hub
-docker pull hdxin2002/ultrarag:v0.3.0-base-cpu # Base version (CPU)
-docker pull hdxin2002/ultrarag:v0.3.0-base-gpu # Base version (GPU)
-docker pull hdxin2002/ultrarag:v0.3.0          # Full version (GPU)
+# 2. Подготовка образа (выберите один)
+# Вариант A: Загрузить с Docker Hub
+docker pull hdxin2002/ultrarag:v0.3.0-base-cpu # Базовая версия (CPU)
+docker pull hdxin2002/ultrarag:v0.3.0-base-gpu # Базовая версия (GPU)
+docker pull hdxin2002/ultrarag:v0.3.0          # Полная версия (GPU)
 
-# Option B: Build locally
+# Вариант B: Собрать локально
 docker build -t ultrarag:v0.3.0 .
 ```
 
-**Start the Container**
+**Запуск контейнера**
 
 ```shell
-# Start the container (Port 5050 is mapped by default)
+# Запуск контейнера (порт 5050 маппится по умолчанию)
 docker run -it --gpus all -p 5050:5050 <docker_image_name>
 ```
 
-Note: After the container starts, UltraRAG UI will run automatically. You can directly access `http://localhost:5050` in your browser to use it.
+Примечание: после запуска контейнера UltraRAG UI запустится автоматически. Вы можете напрямую открыть в браузере `http://localhost:5050`.
 
-### Verify Installation
+### Проверка установки
 
-After installation, run the following example command to check if the environment is normal:
+После установки выполните следующую команду для проверки корректности окружения:
 
 ```shell
 ultrarag run examples/experiments/sayhello.yaml
 ```
 
-If you see the following output, the installation is successful:
+Если вы увидите следующий вывод, установка прошла успешно:
 
 ```
 Hello, UltraRAG v3!
 ```
 
 
-## 🚀 Quick Start
+## 🚀 Быстрый старт
 
-We provide complete tutorial examples from beginner to advanced. Whether you are conducting academic research or building industrial applications, you can find guidance here. Welcome to visit the [Documentation](https://ultrarag.openbmb.cn/pages/en/getting_started/introduction) for more details.
+Мы предоставляем полные примеры учебных руководств от начинающего до продвинутого уровня. Независимо от того, проводите ли вы академические исследования или создаёте промышленные приложения, здесь вы найдёте руководство. Добро пожаловать в [Документацию](https://ultrarag.openbmb.cn/pages/en/getting_started/introduction) для получения более подробной информации.
 
-### 🔬 Research Experiments
-Designed for researchers, providing data, experimental workflows, and visualization analysis tools.
-- [Getting Started](https://ultrarag.openbmb.cn/pages/en/getting_started/quick_start): Learn how to quickly run standard RAG experimental workflows based on UltraRAG.
-- [Evaluation Data](https://ultrarag.openbmb.cn/pages/en/develop_guide/dataset): Download the most commonly used public evaluation datasets in the RAG field and large-scale retrieval corpora, directly for research benchmark testing.
-- [Case Analysis](https://ultrarag.openbmb.cn/pages/en/develop_guide/case_study): Provides a visual Case Study interface to deeply track each intermediate output of the workflow, assisting in analysis and error attribution.
-- [Structured Debugging Guide](./docs/debug_rag_workflows_zh.md) (Chinese): When answers look suspicious, retrieval hits are unstable, the reasoning chain drifts, or post-deployment behavior is abnormal, troubleshoot across four layers — input & retrieval, reasoning & planning, state & context, and deployment & runtime.
-- [Code Integration](https://ultrarag.openbmb.cn/pages/en/develop_guide/code_integration): Learn how to directly call UltraRAG components in Python code to achieve more flexible customized development.
+### 🔬 Исследовательские эксперименты
+Разработано для исследователей, предоставляет данные, экспериментальные рабочие процессы и инструменты визуального анализа.
+- [Быстрый старт](https://ultrarag.openbmb.cn/pages/en/getting_started/quick_start): узнайте, как быстро запустить стандартные RAG-экспериментальные рабочие процессы на основе UltraRAG.
+- [Данные для оценки](https://ultrarag.openbmb.cn/pages/en/develop_guide/dataset): скачайте наиболее часто используемые публичные наборы данных для оценки в области RAG и крупномасштабные корпуса для извлечения, непосредственно для тестирования исследовательских бенчмарков.
+- [Анализ кейсов](https://ultrarag.openbmb.cn/pages/en/develop_guide/case_study): предоставляет визуальный интерфейс Case Study для глубокого отслеживания каждого промежуточного вывода рабочего процесса, помогая в анализе и атрибуции ошибок.
+- [Структурированное руководство по отладке](./docs/debug_rag_workflows.md): когда ответы выглядят подозрительными, результаты извлечения нестабильны, цепочка рассуждений дрейфует, или поведение после развёртывания ненормальное, диагностируйте на четырёх уровнях — ввод и извлечение, рассуждение и планирование, состояние и контекст, развёртывание и выполнение.
+- [Интеграция с кодом](https://ultrarag.openbmb.cn/pages/en/develop_guide/code_integration): узнайте, как напрямую вызывать компоненты UltraRAG в Python-коде для достижения более гибкой пользовательской разработки.
 
-### 🛠️ Demo Systems
-Designed for developers and end users, providing complete UI interaction and complex application cases.
-- [Quick Start](https://ultrarag.openbmb.cn/pages/en/ui/start): Learn how to start UltraRAG UI and familiarize yourself with various advanced configurations in administrator mode.
-- [Deployment Guide](https://ultrarag.openbmb.cn/pages/en/ui/prepare): Detailed production environment deployment tutorials, covering the setup of Retriever, Generation models (LLM), and Milvus vector database.
-- [Deep Research](https://ultrarag.openbmb.cn/pages/en/demo/deepresearch): Flagship case, deploy a Deep Research Pipeline. Combined with the AgentCPM-Report model, it can automatically perform multi-step retrieval and integration to generate tens of thousands of words of survey reports.
+### 🛠️ Демо-системы
+Разработано для разработчиков и конечных пользователей, предоставляет полный UI-интерфейс и сложные прикладные кейсы.
+- [Быстрый старт](https://ultrarag.openbmb.cn/pages/en/ui/start): узнайте, как запустить UltraRAG UI и ознакомьтесь с различными расширенными конфигурациями в режиме администратора.
+- [Руководство по развёртыванию](https://ultrarag.openbmb.cn/pages/en/ui/prepare): подробные руководства по развёртыванию в производственном окружении, охватывающие настройку Retriever, моделей генерации (LLM) и векторной базы данных Milvus.
+- [Deep Research](https://ultrarag.openbmb.cn/pages/en/demo/deepresearch): флагманский кейс, развёртывание Deep Research Pipeline. В сочетании с моделью AgentCPM-Report может автоматически выполнять многоэтапное извлечение и интеграцию для генерации обзорных отчётов десятками тысяч слов.
 
-## 🤝 Contributing
+## 🤝 Вклад
 
-Thanks to the following contributors for their code submissions and testing. We also welcome new members to join us in collectively building a comprehensive RAG ecosystem!
+Благодарим следующих контрибьюторов за их коммиты и тестирование. Мы также приветствуем новых участников присоединиться к нам в коллективном построении комплексной RAG-экосистемы!
 
-You can contribute by following the standard process: **Fork this repository → Submit Issues → Create Pull Requests (PRs)**.
+Вы можете внести вклад, следуя стандартному процессу: **Fork этого репозитория → Создайте Issues → Создайте Pull Requests (PRs)**.
 
 <a href="https://github.com/OpenBMB/UltraRAG/contributors">
   <img src="https://contrib.rocks/image?repo=OpenBMB/UltraRAG&nocache=true" />
 </a>
 
-## ⭐ Support Us
+## ⭐ Поддержите нас
 
-If you find this repository helpful for your research, please consider giving us a ⭐ to show your support.
+Если этот репозиторий полезен для ваших исследований, пожалуйста, поставьте нам ⭐, чтобы показать свою поддержку.
 
 <a href="https://star-history.dera.page/#OpenBMB/UltraRAG&type=Date">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=OpenBMB/UltraRAG&type=Date&theme=dark" />
    <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=OpenBMB/UltraRAG&type=Date" />
-   <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=OpenBMB/UltraRAG&type=Date" />
+   <img alt="История звёзд" src="https://star-history.derea.page/svg?repos=OpenBMB/UltraRAG&type=Date" />
  </picture>
 </a>
 
-## 💬 Contact Us
+## 💬 Свяжитесь с нами
 
-- For technical issues and feature requests, please use [GitHub Issues](https://github.com/OpenBMB/UltraRAG/issues).
-- For questions about usage, feedback, or any discussions related to RAG technologies, you are welcome to join our [WeChat group](https://github.com/OpenBMB/UltraRAG/blob/main/docs/wechat_qr.png), [Feishu group](https://github.com/OpenBMB/UltraRAG/blob/main/docs/feishu_qr.png), and [Discord](https://discord.gg/yRFFjjJnnS) to exchange ideas with us.
-- If you have any questions, feedback, or would like to get in touch, please feel free to reach out to us via email at yanyk.thu@gmail.com
+- По техническим вопросам и запросам функций, пожалуйста, используйте [GitHub Issues](https://github.com/OpenBMB/UltraRAG/issues).
+- По вопросам использования, обратной связи или любых дискуссий, связанных с RAG-технологиями, вы можете присоединиться к нашим [WeChat группе](https://github.com/OpenBMB/UltraRAG/blob/main/docs/wechat_qr.png), [Feishu группе](https://github.com/OpenBMB/UltraRAG/blob/main/docs/feishu_qr.png) и [Discord](https://discord.gg/yRFFjjJnnS) для обмена идеями.
+- Если у вас есть вопросы, отзывы или вы хотите связаться с нами, пожалуйста, напишите нам на yanyk.thu@gmail.com
 
 <table>
   <tr>
     <td align="center">
-      <img src="./docs/wechat_qr.png" alt="WeChat Group QR Code" width="220"/><br/>
-      <b>WeChat Group</b>
+      <img src="./docs/wechat_qr.png" alt="QR-код WeChat группы" width="220"/><br/>
+      <b>WeChat группа</b>
     </td>
     <td align="center">
-      <img src="./docs/feishu_qr.png" alt="Feishu Group QR Code" width="220"/><br/>
-      <b>Feishu Group</b>
+      <img src="./docs/feishu_qr.png" alt="QR-код Feishu группы" width="220"/><br/>
+      <b>Feishu группа</b>
     </td>
     <td align="center">
       <a href="https://discord.gg/yRFFjjJnnS">
-        <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord"/>
+        <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Присоединиться к Discord"/>
       </a><br/>
       <b>Discord</b>
   </td>
   </tr>
 </table>
 
-## 📖 Publications
+## 📖 Публикации
 
-### Papers
+### Статьи
 
-1. Shi Yu, Chaoyue Tang, Bokai Xu, Junbo Cui, Junhao Ran, Yukun Yan, Zhenghao Liu, Shuo Wang, Xu Han, Zhiyuan Liu, Maosong Sun. (2025) VisRAG: Vision-based Retrieval-augmented Generation on Multi-modality Documents. [arXiv:2410.10594](https://arxiv.org/abs/2410.10594) and [In Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)](https://openreview.net/forum?id=zG459X3Xge).
+1. Shi Yu, Chaoyue Tang, Bokai Xu, Junbo Cui, Junhao Ran, Yukun Yan, Zhenghao Liu, Shuo Wang, Xu Han, Zhiyuan Liu, Maosong Sun. (2025) VisRAG: Vision-based Retrieval-augmented Generation on Multi-modality Documents. [arXiv:2410.10594](https://arxiv.org/abs/2410.10594) и [In Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)](https://openreview.net/forum?id=zG459X3Xge).
 
-2. Xinze Li, Sen Mei, Zhenghao Liu, Yukun Yan, Shuo Wang, Shi Yu, Zheni Zeng, Hao Chen, Ge Yu, Zhiyuan Liu, Maosong Sun, Chenyan Xiong. (2025) RAG-DDR: Optimizing Retrieval-Augmented Generation Using Differentiable Data Rewards. [arXiv:2410.13509](https://arxiv.org/abs/2410.13509) and [In Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)](https://openreview.net/forum?id=Pnktu2PBXD).
+2. Xinze Li, Sen Mei, Zhenghao Liu, Yukun Yan, Shuo Wang, Shi Yu, Zheni Zeng, Hao Chen, Ge Yu, Zhiyuan Liu, Maosong Sun, Chenyan Xiong. (2025) RAG-DDR: Optimizing Retrieval-Augmented Generation Using Differentiable Data Rewards. [arXiv:2410.13509](https://arxiv.org/abs/2410.13509) и [In Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)](https://openreview.net/forum?id=Pnktu2PBXD).
 
-3. Kunlun Zhu, Yifan Luo, Dingling Xu, Yukun Yan, Zhenghao Liu, Shi Yu, Ruobing Wang, Shuo Wang, Yishan Li, Nan Zhang, Xu Han, Zhiyuan Liu, Maosong Sun. (2025) RAGEval: Scenario Specific RAG Evaluation Dataset Generation Framework. [arXiv:2408.01262](https://arxiv.org/abs/2408.01262) and [In Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)](https://aclanthology.org/2025.acl-long.418/).
+3. Kunlun Zhu, Yifan Luo, Dingling Xu, Yukun Yan, Zhenghao Liu, Shi Yu, Ruobing Wang, Shuo Wang, Yishan Li, Nan Zhang, Xu Han, Zhiyuan Liu, Maosong Sun. (2025) RAGEval: Scenario Specific RAG Evaluation Dataset Generation Framework. [arXiv:2408.01262](https://arxiv.org/abs/2408.01262) и [In Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)](https://aclanthology.org/2025.acl-long.418/).
 
-4. Ruobing Wang, Qingfei Zhao, Yukun Yan, Daren Zha, Yuxuan Chen, Shi Yu, Zhenghao Liu, Yixuan Wang, Shuo Wang, Xu Han, Zhiyuan Liu, Maosong Sun. (2025) DeepNote: Note-Centric Deep Retrieval-Augmented Generation. [arXiv:2410.08821](https://arxiv.org/abs/2410.08821) and [In Findings of the Association for Computational Linguistics: EMNLP 2025](https://aclanthology.org/2025.findings-emnlp.1073/).
+4. Ruobing Wang, Qingfei Zhao, Yukun Yan, Daren Zha, Yuxuan Chen, Shi Yu, Zhenghao Liu, Yixuan Wang, Shuo Wang, Xu Han, Zhiyuan Liu, Maosong Sun. (2025) DeepNote: Note-Centric Deep Retrieval-Augmented Generation. [arXiv:2410.08821](https://arxiv.org/abs/2410.08821) и [In Findings of the Association for Computational Linguistics: EMNLP 2025](https://aclanthology.org/2025.findings-emnlp.1073/).
 
-### Models
+### Модели
 
 1. Yishan Li, Wentong Chen, Yukun Yan, Mingwei Li, Sen Mei, Xiaorong Wang, Kunpeng Liu, Xin Cong, Shuo Wang, Zhong Zhang, Yaxi Lu, Zhenghao Liu, Yankai Lin, Zhiyuan Liu, Maosong Sun. (2026) AgentCPM-Report: Interleaving Drafting and Deepening for Open-Ended Deep Research. [arXiv:2602.06540](https://arxiv.org/abs/2602.06540).
 

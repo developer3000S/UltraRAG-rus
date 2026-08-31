@@ -10,30 +10,42 @@ from fastmcp.exceptions import ToolError
 from .base import BaseWebSearchBackend
 
 
-class ZhipuaiWebSearchBackend(BaseWebSearchBackend):
-    """Web search backend for ZhipuAI."""
+class OmnirouteWebSearchBackend(BaseWebSearchBackend):
+    """Web search backend for Omniroute.
+
+    Использует Omniroute API как унифицированный шлюз для web-поиска.
+    Конфигурация по умолчанию берётся из переменных окружения:
+    - OMNIROUTE_API_KEY
+    - OMNIROUTE_HOST
+    - OMNIROUTE_API_PATH
+    - OMNIROUTE_MODEL
+    """
 
     def __init__(self, config: Optional[Dict[str, Any]], logger, **kwargs: Any) -> None:
         super().__init__(config=config, logger=logger, **kwargs)
-        api_key = self.config.get("api_key") or os.environ.get("ZHIPUAI_API_KEY", "")
+        api_key = self.config.get("api_key") or os.environ.get("OMNIROUTE_API_KEY", "")
         if not api_key:
             err_msg = (
-                "ZHIPUAI_API_KEY environment variable is not set. "
-                "Please set it to use ZhipuAI."
+                "OMNIROUTE_API_KEY environment variable is not set. "
+                "Please set it to use Omniroute."
             )
             self.logger.error(err_msg)
             raise ToolError(err_msg)
 
         self._api_key = api_key
-        self._base_url = self.config.get(
-            "base_url", "https://open.bigmodel.cn/api/paas/v4/web_search"
+        host = self.config.get("host") or os.environ.get(
+            "OMNIROUTE_HOST", "http://147.45.125.8:20128"
         )
-        self._search_engine = self.config.get("search_engine", "search_std")
-        self._search_intent = self.config.get("search_intent", False)
-        self._search_recency_filter = self.config.get(
-            "search_recency_filter", "noLimit"
+        api_path = self.config.get("api_path") or os.environ.get(
+            "OMNIROUTE_API_PATH", "/api/v1"
         )
-        self._content_size = self.config.get("content_size", "medium")
+        self._base_url = f"{host.rstrip('/')}{api_path if api_path.startswith('/') else '/' + api_path}/websearch"
+        self._model = self.config.get("model") or os.environ.get(
+            "OMNIROUTE_MODEL", "free-stack"
+        )
+        self._retries = int(self.config.get("retries", 3))
+        self._base_delay = float(self.config.get("base_delay", 1.0))
+        self._timeout = self.config.get("timeout", None)
 
     async def search(
         self,
@@ -45,12 +57,9 @@ class ZhipuaiWebSearchBackend(BaseWebSearchBackend):
         if not queries:
             return []
 
-        retries = int(self.config.get("retries", 3))
-        base_delay = float(self.config.get("base_delay", 1.0))
-        search_kwargs = dict(self.config.get("search_kwargs", {}) or {})
-        result_key = self.config.get("result_key", "search_result")
+        result_key = self.config.get("result_key", "results")
         content_key = self.config.get("content_key", "content")
-        desc = self.config.get("progress_desc", "ZhipuAI Searching:")
+        desc = self.config.get("progress_desc", "Omniroute Searching:")
         effective_top_k = None if top_k is None else int(top_k)
 
         headers = {
@@ -58,33 +67,24 @@ class ZhipuaiWebSearchBackend(BaseWebSearchBackend):
             "Content-Type": "application/json",
         }
 
-        timeout = self.config.get("timeout", None)
         timeout_cfg = (
-            aiohttp.ClientTimeout(total=float(timeout)) if timeout else None
+            aiohttp.ClientTimeout(total=float(self._timeout))
+            if self._timeout
+            else None
         )
 
         async with aiohttp.ClientSession(timeout=timeout_cfg) as session:
 
             async def worker_factory(idx: int, q: str):
-                delay = base_delay
-                for attempt in range(retries):
+                delay = self._base_delay
+                for attempt in range(self._retries):
                     try:
                         payload = {
-                            "search_query": q,
-                            "search_engine": self._search_engine,
-                            "search_intent": self._search_intent,
-                            "search_recency_filter": self._search_recency_filter,
-                            "content_size": self._content_size,
+                            "model": self._model,
+                            "query": q,
                         }
                         if effective_top_k is not None:
-                            payload["count"] = effective_top_k
-                        else:
-                            count = self.config.get("count", None)
-                            if count is not None:
-                                payload["count"] = count
-
-                        if search_kwargs:
-                            payload.update(search_kwargs)
+                            payload["top_k"] = effective_top_k
 
                         async with session.post(
                             self._base_url, json=payload, headers=headers
@@ -102,7 +102,7 @@ class ZhipuaiWebSearchBackend(BaseWebSearchBackend):
                             return idx, psg_ls
                     except (aiohttp.ClientError, Exception) as e:
                         warn_msg = (
-                            f"[zhipuai][retry {attempt+1}] failed (idx={idx}): {e}"
+                            f"[omniroute][retry {attempt+1}] failed (idx={idx}): {e}"
                         )
                         self.logger.warning(warn_msg)
                         await asyncio.sleep(delay)

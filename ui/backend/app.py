@@ -211,7 +211,7 @@ def _set_run_fonts(
     from docx.shared import Pt
 
     latin_font = "Consolas" if mono else "Calibri"
-    east_asia_font = "等线" if mono else "Microsoft YaHei"
+    east_asia_font = "Arial" if mono else "Arial"
     run.font.name = latin_font
 
     r_pr = run._element.get_or_add_rPr()

@@ -10,7 +10,7 @@ import {
 import type { ReactNode } from "react";
 import { useUiStore } from "@/features/ui/useUiStore";
 
-type LocaleCode = "zh" | "en";
+type LocaleCode = "ru" | "en";
 type LocaleDict = Record<string, string>;
 
 declare global {
@@ -27,12 +27,12 @@ type I18nContextValue = {
 };
 
 const FALLBACK_LOCALES: Record<LocaleCode, LocaleDict> = {
-  zh: {
-    settings: "设置",
-    builder: "构建器",
-    language: "语言",
-    auth_account: "账号",
-    select_pipeline: "选择 Pipeline",
+  ru: {
+    settings: "Настройки",
+    builder: "Конструктор",
+    language: "Язык",
+    auth_account: "Аккаунт",
+    select_pipeline: "Выберите Pipeline",
   },
   en: {
     settings: "Settings",
@@ -71,7 +71,7 @@ function loadScript(src: string): Promise<void> {
 
 function getLocaleFromStorage(): LocaleCode {
   const value = localStorage.getItem("ultrarag_ui_lang");
-  return value === "en" ? "en" : "zh";
+  return value === "en" ? "en" : "ru";
 }
 
 export function UltraI18nProvider({ children }: { children: ReactNode }) {
@@ -90,7 +90,7 @@ export function UltraI18nProvider({ children }: { children: ReactNode }) {
       try {
         await Promise.all([
           loadScript("/theme/i18n/en.js"),
-          loadScript("/theme/i18n/zh.js"),
+          loadScript("/theme/i18n/ru.js"),
         ]);
       } catch {
         // Keep fallback dictionary available even if theme assets are absent.

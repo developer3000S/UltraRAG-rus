@@ -37,7 +37,7 @@ generation:
     max_tokens: 2048
     temperature: 0.7
     top_p: 0.8
-  system_prompt: 你是一个专业的UltraRAG问答助手。请一定记住使用中文回答问题。
+  system_prompt: Вы — профессиональный ассистент UltraRAG для вопросно-ответной системы. Всегда отвечайте на русском языке.
 prompt:
   webnote_fill_page_template: prompt/webnote_fill_page_citation.jinja
   webnote_gen_answer_template: prompt/webnote_gen_report.jinja

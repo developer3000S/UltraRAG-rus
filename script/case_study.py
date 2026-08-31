@@ -295,13 +295,13 @@ INDEX_HTML = r"""<!doctype html>
   <div class="topbar">
     <div class="topbar-row">
       <div class="topbar-title"><div class="topbar-icon"></div>{title}</div>
-      <select id="file-select" class="file-select" title="选择数据文件"></select>
+      <select id="file-select" class="file-select" title="Select data file"></select>
       <div class="topbar-sep"></div>
       <div class="btn-group">
-        <button id="prev" class="btn">← 上一条</button>
-        <button id="next" class="btn">下一条 →</button>
+        <button id="prev" class="btn">← Prev</button>
+        <button id="next" class="btn">Next →</button>
       </div>
-      <button id="toggle-all" class="btn">全部展开</button>
+      <button id="toggle-all" class="btn">Expand All</button>
       <div class="topbar-badge" id="counter">Case 1 / 1</div>
     </div>
   </div>
@@ -312,11 +312,11 @@ INDEX_HTML = r"""<!doctype html>
 
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <img id="lightbox-img" alt="" />
-    <button id="lightbox-close" class="lightbox-close" type="button">关闭 ✕</button>
+    <button id="lightbox-close" class="lightbox-close" type="button">Close ✕</button>
   </div>
 
   <div class="footer">
-    键盘 ← → 切换 Case &#183; 点击步骤展开/收起 &#183; 顶部切换数据文件 &#183; <a href="/api/reload">/api/reload</a> 热加载
+    Keyboard ← → to switch Case &#183; Click step to expand/collapse &#183; Top to switch data file &#183; <a href="/api/reload">/api/reload</a> Hot reload
   </div>
 
 <script>
@@ -414,7 +414,7 @@ async function switchFile(filePath) {
   if (sel) sel.disabled = true;
   try {
     const res = await fetch('/api/switch?file=' + encodeURIComponent(filePath));
-    if (!res.ok) { alert('切换文件失败'); return; }
+    if (!res.ok) { alert('Failed to switch file'); return; }
     state.currentFile = filePath;
     await fetchCases();
     state.idx = 0;
@@ -443,7 +443,7 @@ function render() {
 
   if (casesCount === 0) {
     $("#counter").textContent = "Case 0 / 0";
-    container.innerHTML = '<div class="empty">没有加载到任何 case</div>';
+    container.innerHTML = '<div class="empty">No cases loaded</div>';
     $("#prev").disabled = true;
     $("#next").disabled = true;
     return;
@@ -605,7 +605,7 @@ async function main() {
   parseHash();
   if (!Array.isArray(state.cases)) state.cases = [];
   if (state.cases.length === 0) {
-    // 空状态
+    // Empty state
   } else {
     if (state.idx < 0) state.idx = 0;
     if (state.idx > state.cases.length - 1) state.idx = state.cases.length - 1;
@@ -719,12 +719,12 @@ def parse_args():
         "--data",
         "-d",
         required=True,
-        help="数据文件路径（.json / .jsonl / 单个 case 的 JSON）",
+        help="Data file path (.json / .jsonl / single case JSON)",
     )
-    p.add_argument("--host", default="127.0.0.1", help="绑定地址，默认 127.0.0.1")
-    p.add_argument("--port", type=int, default=8080, help="端口，默认 8080")
-    p.add_argument("--title", "-t", default="Case Study Viewer", help="页面标题")
-    p.add_argument("--static-root", action="append", default=[], help="本地静态资源根目录，可多次指定，用于图片/文件直出")
+    p.add_argument("--host", default="127.0.0.1", help="Bind address, default 127.0.0.1")
+    p.add_argument("--port", type=int, default=8080, help="Port, default 8080")
+    p.add_argument("--title", "-t", default="Case Study Viewer", help="Page title")
+    p.add_argument("--static-root", action="append", default=[], help="Local static resource root, can be specified multiple times for image/file output")
     return p.parse_args()
 
 
@@ -736,7 +736,7 @@ def main():
     try:
         STATE.cases = _expand_cases_if_needed(load_cases(STATE.data_path))
     except Exception as e:
-        raise SystemExit(f"!!! 加载数据失败: {e}")
+        raise SystemExit(f"!!! Failed to load data: {e}")
 
     # Configure static roots (manual > auto-detect)
     if args.static_root:

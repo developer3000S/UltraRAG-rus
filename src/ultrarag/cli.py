@@ -291,13 +291,13 @@ def make_welcome_banner() -> Panel:
 
     welcome_text = Text()
     welcome_text.append("\n")
-    welcome_text.append("  欢迎使用 ", style=STYLES["secondary"])
+    welcome_text.append("  Добро пожаловать, ", style=STYLES["secondary"])
     welcome_text.append(get_gradient_text("UltraRAG"))
-    welcome_text.append(" - 新一代 RAG 开发框架\n", style=STYLES["secondary"])
+    welcome_text.append(" — фреймворк нового поколения для RAG-разработки\n", style=STYLES["secondary"])
     welcome_text.append("\n")
-    welcome_text.append("  使用 ", style=STYLES["muted"])
+    welcome_text.append("  Используйте ", style=STYLES["muted"])
     welcome_text.append("ultrarag --help", style=STYLES["highlight"])
-    welcome_text.append(" 查看所有可用命令\n", style=STYLES["muted"])
+    welcome_text.append(" для просмотра всех доступных команд\n", style=STYLES["muted"])
 
     return Panel(
         Group(logo_text, welcome_text),

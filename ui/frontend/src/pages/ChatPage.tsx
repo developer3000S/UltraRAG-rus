@@ -914,12 +914,12 @@ export function ChatPage() {
   );
   const displayStatusText = useMemo(() => {
     if (chatStatus === "ready") {
-      return t("status_ready", locale === "zh" ? "就绪" : "Ready");
+      return t("status_ready", locale === "ru" ? "Готов" : "Ready");
     }
     if (chatStatus === "error") {
-      return locale === "zh" ? "失败" : "Failed";
+      return locale === "ru" ? "Ошибка" : "Failed";
     }
-    return locale === "zh" ? "加载中" : "Loading";
+    return locale === "ru" ? "Загрузка..." : "Loading";
   }, [chatStatus, locale, t]);
   const greetingHeadline = useMemo(() => {
     const nickname = (authInfo?.nickname ?? "").trim();
@@ -1750,11 +1750,11 @@ export function ChatPage() {
         setBackgroundMode(false);
         await loadBackgroundTaskData();
         await showAlertModal({
-          title: t("bg_task_submitted_title", locale === "zh" ? "任务已提交" : "Task Submitted"),
+          title: t("bg_task_submitted_title", locale === "ru" ? "Задача отправлена" : "Task Submitted"),
           message: t(
             "bg_task_submitted_message",
-            locale === "zh"
-              ? "问题已提交到后台，处理完成后会通知你。"
+            locale === "ru"
+              ? "Вопрос отправлен в фон, вы получите уведомление по завершении."
               : "Question sent to background, you will be notified when complete.",
           ),
           type: "info",
@@ -1990,9 +1990,9 @@ export function ChatPage() {
     setAccountStatus("");
     try {
       await nicknameMutation.mutateAsync(nickname);
-      setAccountStatus("昵称已保存。");
+      setAccountStatus("Никнейм сохранён.");
     } catch (error) {
-      setAccountStatus(error instanceof Error ? error.message : "保存昵称失败");
+      setAccountStatus(error instanceof Error ? error.message : "Ошибка сохранения никнейма");
       throw error;
     }
   };
@@ -2001,9 +2001,9 @@ export function ChatPage() {
     setAccountStatus("");
     try {
       await changePasswordMutation.mutateAsync(payload);
-      setAccountStatus("密码已更新。");
+      setAccountStatus("Пароль обновлён.");
     } catch (error) {
-      setAccountStatus(error instanceof Error ? error.message : "修改密码失败");
+      setAccountStatus(error instanceof Error ? error.message : "Ошибка изменения пароля");
       throw error;
     }
   };
@@ -2015,9 +2015,9 @@ export function ChatPage() {
     setAccountStatus("");
     try {
       await modelSettingsMutation.mutateAsync(payload);
-      setAccountStatus("模型设置已保存。");
+      setAccountStatus("Настройки модели сохранены.");
     } catch (error) {
-      setAccountStatus(error instanceof Error ? error.message : "保存模型设置失败");
+      setAccountStatus(error instanceof Error ? error.message : "Ошибка сохранения настроек модели");
       throw error;
     }
   };
@@ -2026,9 +2026,9 @@ export function ChatPage() {
     setAccountStatus("");
     try {
       await modelSettingsMutation.mutateAsync({});
-      setAccountStatus("模型设置已清空。");
+      setAccountStatus("Настройки модели очищены.");
     } catch (error) {
-      setAccountStatus(error instanceof Error ? error.message : "清空模型设置失败");
+      setAccountStatus(error instanceof Error ? error.message : "Ошибка очистки настроек модели");
       throw error;
     }
   };
@@ -2641,8 +2641,8 @@ export function ChatPage() {
         const displayName = getCollectionDisplayName(matched);
         const suffix =
           displayName && displayName !== selectedCollectionName
-            ? locale === "zh"
-              ? `（别名“${displayName}”）`
+            ? locale === "ru"
+              ? ` (псевдоним «${displayName}»)`
               : ` as "${displayName}"`
             : "";
         const choice = await showKbIndexChoiceModal(
@@ -3655,12 +3655,12 @@ export function ChatPage() {
                       className={`settings-submenu-item ${locale === "zh" ? "active" : ""}`}
                       onClick={(event) => {
                         event.stopPropagation();
-                        setLocale("zh");
+                        setLocale("ru");
                         setLanguageSubmenuOpen(false);
                         setSettingsMenuOpen(false);
                       }}
                     >
-                      <span>中文</span>
+                      <span>Русский</span>
                     </button>
                     <button
                       type="button"
@@ -3797,7 +3797,7 @@ export function ChatPage() {
                 ) : (
                   <li>
                     <span className="dropdown-item text-muted small">
-                      {locale === "zh" ? "暂无可用 Pipeline（请先 Build）" : "No built pipelines (build first)"}
+                      {locale === "ru" ? "Нет собранных Pipeline (сначала Build)" : "No built pipelines (build first)"}
                     </span>
                   </li>
                 )}
@@ -3904,7 +3904,7 @@ export function ChatPage() {
                               }
                             }}
                           >
-                            <span>{t("chat_show_thinking", "显示思考")}</span>
+                            <span>{t("chat_show_thinking", "Показать мышление")}</span>
                             <svg
                               className="process-chevron"
                               width="16"

@@ -1194,7 +1194,7 @@ class Retriever:
             query_list: List of query strings
             top_k: Number of top results to return per query
             retrieve_thread_num: Maximum number of concurrent workers
-            websearch_backend: Backend name ("tavily", "exa", "zhipuai")
+            websearch_backend: Backend name ("tavily", "exa", "omniroute")
             websearch_backend_configs: Backend configuration dictionary
 
         Returns:
@@ -1236,7 +1236,7 @@ class Retriever:
             batch_query_list: List of query lists (one batch per list)
             top_k: Number of top results to return per query
             retrieve_thread_num: Maximum number of concurrent workers
-            websearch_backend: Backend name ("tavily", "exa", "zhipuai")
+            websearch_backend: Backend name ("tavily", "exa", "omniroute")
             websearch_backend_configs: Backend configuration dictionary
 
         Returns:
